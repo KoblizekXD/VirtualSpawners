@@ -1,0 +1,48 @@
+settings:
+  prefix: "#fcdfff&l[VS] #a6e4f7&l»"
+  spawner-interval: 60 #How many seconds till each 'spawn'
+  kill-interval: 35 #How many seconds till each 'kill' (amount to kill are based of efficiency)
+  title-messages:
+    enabled: true
+  redeemable-spawner:
+    name: "#fcdfff%name% Spawner #bce3f9(Tier: %tier%)"
+    lore:
+      - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+      - ""
+      - "#fcdfffThis spawner spawns #bce3f9%entity% #fcdfffwhich drops #bce3f9%drop%"
+      - ""
+      - "&7(( #fcdfffʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛʜɪs sᴘᴀᴡɴᴇʀ ᴛᴏ ᴀᴅᴅ ɪᴛ ᴅɪʀᴇᴄᴛʟʏ ᴛᴏ ʏᴏᴜʀ #bce3f9/sᴘᴀᴡɴᴇʀʙᴀɴᴋ &7))"
+    material: PLAYER_HEAD
+    skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjQ3ZTJlNWQ1NWI2ZDA0OTQzNTE5YmVkMjU1N2M2MzI5ZTMzYjYwYjkwOWRlZTg5MjNjZDg4YjExNTIxMCJ9fX0="
+    custom-model-data: 0 #0 (to disable CustomModelData)
+  looting-multiply-xp: false
+  disabled-worlds: #Disable spawning in these worlds
+    - "world_nether"
+    - "world_the_end"
+
+messages:
+  on-redeem: "%prefix% #fcdfffYou have added #bce3f9%amount% %entity% spawner(s) #fcdfffto your bank!"
+  on-redeem-fail: "%prefix% #fcdfffYour bank is at max capacity!"
+  on-withdraw-spawner: "%prefix% #fcdfffYou have withdrawn #bce3f9%amount% %entity% Spawners #fcdffffrom your bank!"
+  on-withdraw-item: "%prefix% #fcdfffYou have withdrawn #bce3f9%amount% %drop% #fcdffffrom your bank!"
+  on-withdraw-item-limit: "%prefix% #fcdfffYou cannot withdraw #bce3f9%amount% #fcdfffyou only have #bce3f9%drop-amount%!"
+  on-withdraw-item-fail: "%prefix% #fcdfffYou have nothing to withdraw!"
+  on-sell: "%prefix% #fcdfffYou have made #bce3f9$%amount%#fcdfff!"
+  on-xp-collect: "%prefix% #fcdfffYou have collected #bce3f9$%xp%#fcdfff!"
+  on-receive: "%prefix% #fcdfffYou have received a #bce3f9tier %tier% %entity% #fcdfffspawner#fcdfff!"
+  on-give: "%prefix% #fcdfffYou have given a #bce3f9tier %tier% %entity% #fcdfffspawner #fcdfffto #bce3f9%player%#fcdfff!"
+  on-reset: "%prefix% #fcdfffYou have reset #bce3f9%player%'s #fcdfffspawner value!"
+  on-reset-target: "%prefix% #fcdfffYour spawner value has been reset!"
+  on-upgrade: "%prefix% #fcdfffYou have upgraded your banks #bce3f9%upgrade% #fcdfffto #bce3f9%level%#fcdfff!"
+  on-upgrade-fail-money: "%prefix% #fcdfffYou do not have enough money for this upgrade!"
+  on-upgrade-fail-max: "%prefix% #fcdfffYou have reached the max #bce3f9%upgrade% #fcdffffor your bank#fcdfff!"
+  on-bank-member-add: "%prefix% #fcdfffYou have given #bce3f9%player% access to your bank!"
+  on-bank-access-given: "%prefix% #fcdfffYou have been given access to #bce3f9%player%'s bank"
+  on-bank-member-remove: "%prefix% #fcdfffYou have removed #bce3f9%player% from your bank!"
+  on-bank-access-revoke: "%prefix% #fcdfffYour access to #bce3f9%player%'s bank has been removed"
+
+title-messages:
+  on-redeem-title: "#fcdfffAdded #bce3f9%amount% %entity% spawner(s) #fcdfffto your bank!"
+  on-redeem-subtitle: "&7&oYou can access your spawner bank via &f&o/spawnerbank&7&o!"
+
+

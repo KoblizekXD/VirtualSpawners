@@ -1,0 +1,12 @@
+name: VirtualSpawners
+version: '1.0.9'
+main: me.bunnie.virtualspawners.VirtualSpawners
+description: Add a virtual spawner bank! Store spawners in your bank for easy access and upgrades!
+api-version: 1.13
+prefix: VS
+depend: [Vault]
+commands:
+  vs:
+    aliases: [virtualspawners]
+  sb:
+    aliases: [spawnerbank]

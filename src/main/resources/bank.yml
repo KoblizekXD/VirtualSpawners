@@ -1,0 +1,220 @@
+settings:
+  spawner:
+    default-looting: 1
+    max-looting: 10
+    default-efficieny: 1
+    max-efficieny: 10
+  bank:
+    default-capacity-level: 1
+
+upgrades:
+  capacity:
+    levels:
+      1:
+        upgraded-capacity: 500
+        price: 0
+      2:
+        upgraded-capacity: 1000
+        price: 20000000
+
+menus:
+  filler-item:
+    enabled: true
+    name: " "
+    material: "PINK_STAINED_GLASS_PANE"
+  spawner-bank:
+    title: "Bank"
+    spawner:
+      name: "#fcdfff%entity% Spawner"
+      lore:
+        - "&8sᴛᴀᴛɪsᴛɪᴄs"
+        - ""
+        - "&7Tier: &f%tier%"
+        - "&7Mobs: &f%alive-mobs%/%spawned%"
+        - "&7Amount: &f%amount%"
+        - "&7Value: &a$%value%"
+        - "&7XP: &a%xp%"
+        - ""
+        - "#fcdfffᴄʟɪᴄᴋ ᴛᴏ ᴍᴀɴᴀɢᴇ"
+      material: PLAYER_HEAD
+      skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjQ3ZTJlNWQ1NWI2ZDA0OTQzNTE5YmVkMjU1N2M2MzI5ZTMzYjYwYjkwOWRlZTg5MjNjZDg4YjExNTIxMCJ9fX0="
+      custom-model-data: 0 #0 (to disable CustomModelData)
+    bank-upgrade:
+      name: "&d&lBank Upgrade"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to open a menu that will"
+        - "&7allow you to purchase bank upgrades"
+      material: "NETHER_STAR"
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 53
+    spawner-upgrade:
+      name: "&d&lSpawner Upgrade"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to open a menu that will"
+        - "&7allow you to purchase spawner upgrades"
+      material: "SPAWNER"
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 45
+  spawner-manage:
+    title: "Managing %entity%"
+    withdraw-spawner:
+      name: "&d&lWithdraw Spawners"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to open a prompt that will"
+        - "&7allow you to withdraw this spawner"
+        - "&7you wish to withdraw!"
+      material: "OAK_SIGN"
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 11
+    withdraw-item:
+      name: "&d&lWithdraw Items"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to open a prompt that will"
+        - "&7allow you to withdraw the amount of items"
+        - "&7you wish to withdraw!"
+      material: "CHEST"
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 22
+    xp:
+      name: "&a&lXP"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to collect xp"
+        - "&7collected from this spawner!"
+      material: "EXPERIENCE_BOTTLE"
+      custom-model-data: 0
+      slot: 4
+    sell:
+      name: "&a&lSell"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to sell all items"
+        - "&7collected from this spawner!"
+      material: "EMERALD"
+      custom-model-data: 0
+      slot: 13
+    drop:
+      name: "&e&lDrop Upgrade"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to modify the spawners"
+        - "&7drops to sell for a higher value!"
+      material: "ROTTEN_FLESH"
+      custom-model-data: 0
+      slot: 15
+  spawner-upgrade:
+    title: "Upgrading Spawners"
+    looting:
+      name: "&d&lLooting"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to upgrade the amount of items"
+        - "&7to get from each proc!"
+        - ""
+        - "&7Price: &f%cost%"
+        - "&7Current Level: &f%current-level%"
+        - "&7Next Level: &f%next-level%"
+        - ""
+        - "#fcdfffᴄʟɪᴄᴋ ᴛᴏ ᴜᴘɢʀᴀᴅᴇ"
+      material: "ROTTEN_FLESH"
+      price: 10000000 #Base price for upgrades is simply level * price * price-scale
+      price-scale: 1.75 #Multiplier for each level
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 11
+    efficiency:
+      name: "&e&lEfficiency"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to upgrade the amount of mobs"
+        - "&7to be killed!"
+        - ""
+        - "&7Price: &f%cost%"
+        - "&7Current Level: &f%current-level%"
+        - "&7Next Level: &f%next-level%"
+        - ""
+        - "#fcdfffᴄʟɪᴄᴋ ᴛᴏ ᴜᴘɢʀᴀᴅᴇ"
+      material: "GOLDEN_SWORD"
+      price: 10000000 #Base price for upgrades is simply level * price * price-scale
+      price-scale: 1.75 #Multiplier for each level
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 15
+    replace: #Strings that replace certain aspects of the item's lore such as if the level is maxed.
+      max-level: "&cCannot upgrade any further &7(%current-level%/%max-level%)"
+  spawner-drops:
+    title: "Upgrading Drops"
+    drops:
+      name: "&a&lMob Loot"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to upgrade the loot of"
+        - "&7this spawner for a higher value drop"
+        - ""
+        - "&7Price: &f%cost%"
+        - "&7Current Drop: &r%current-drop%"
+        - "&7Next Level: &r%next-drop%"
+        - ""
+        - "#fcdfffᴄʟɪᴄᴋ ᴛᴏ ᴜᴘɢʀᴀᴅᴇ"
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 4
+    replace: #Strings that replace certain aspects of the item's lore such as if the level is maxed.
+      max-level: "&cCannot upgrade any further &7(%current-level%/%max-level%)"
+  bank-upgrade:
+    title: "Upgrades"
+    capacity:
+      name: "&c&lCapacity"
+      lore:
+        - "&8ᴅᴇsᴄʀɪᴘᴛɪᴏɴ"
+        - "&7Click here to upgrade the capacity"
+        - "&7of spawners you can store!"
+        - ""
+        - "&7Price: &f%cost%"
+        - "&7Current Size: &f%current-size%"
+        - "&7Next Size: &f%next-size%"
+        - ""
+        - "#fcdfffᴄʟɪᴄᴋ ᴛᴏ ᴜᴘɢʀᴀᴅᴇ"
+      material: "ENDER_CHEST"
+      custom-model-data: 0 #0 (to disable CustomModelData)
+      slot: 13
+    replace: #Strings that replace certain aspects of the item's lore such as if the level is maxed.
+      max-level: "&cCannot upgrade any further &7(%current-level%/%max-level%)"
+  withdraw-confirmation:
+    title: "Withdraw Confirmation"
+    spawner:
+      name: "&d%entity% Spawner"
+      lore:
+        - "&8sᴛᴀᴛɪsᴛɪᴄs"
+        - ""
+        - "&7Tier: &f%tier%"
+        - "&7Withdrawing: &f%withdraw-amount%"
+        - "&7Amount: &f%amount%"
+        - ""
+        - "#fcdfffᴄʟɪᴄᴋ ᴛᴏ ᴡɪᴛʜᴅʀᴀᴡ"
+      material: PLAYER_HEAD
+      skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjQ3ZTJlNWQ1NWI2ZDA0OTQzNTE5YmVkMjU1N2M2MzI5ZTMzYjYwYjkwOWRlZTg5MjNjZDg4YjExNTIxMCJ9fX0="
+      custom-model-data: 0 #0 (to disable CustomModelData)
+    item:
+      name: "&d%item%"
+      lore:
+        - "&8sᴛᴀᴛɪsᴛɪᴄs"
+        - ""
+        - "&7Withdrawing: &f%withdraw-amount%"
+        - "&7Amount: &f%amount%"
+        - ""
+        - "#fcdfffᴄʟɪᴄᴋ ᴛᴏ ᴡɪᴛʜᴅʀᴀᴡ"
+
+    confirm:
+      name: "&aConfirm"
+      lore:
+        - "&8Click to withdraw this spawner from your bank!"
+      material: LIME_WOOL
+      custom-model-data: 0 #0 (to disable CustomModelData)
+    cancel:
+      name: "&cCancel"
+      lore:
+        - "&8Click to cancel this spawner withdraw request!"
+      material: RED_WOOL
+      custom-model-data: 0 #0 (to disable CustomModelData)

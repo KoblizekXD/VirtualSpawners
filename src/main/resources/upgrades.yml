@@ -1,0 +1,27 @@
+settings:
+  spawner:
+    default-looting: 1
+    default-efficiency: 1
+    max-looting: 10
+    max-efficiency: 10
+  bank:
+    default-capacity: 1
+
+upgrades:
+  bank:
+    capacity:
+      levels:
+        1:
+          upgraded-capacity: 500
+          price: 0
+        2:
+          upgraded-capacity: 1000
+          price: 20000000
+  spawner:
+    looting:
+      price: 10000000 # The final price is calculated using the following formula finalPrice = round(basePrice * toScaleBy^(targetLevel)) "^" represents the exponentiation operator "round" rounds the result to the nearest integer
+      price-scale: 1.5 #Multiplier for each level
+    efficiency:
+      price: 10000000 # The final price is calculated using the following formula finalPrice = round(basePrice * toScaleBy^(targetLevel)) "^" represents the exponentiation operator "round" rounds the result to the nearest integer
+      price-scale: 1.5 #Multiplier for each level
+

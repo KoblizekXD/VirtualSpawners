@@ -1,0 +1,61 @@
+######################################################################################
+#Section names are case sensitive. Keep them all in caps otherwise errors will occur!#
+######################################################################################
+CHICKEN:
+  tier:
+    '1':
+      item-drop:
+        name: '&eRaw Chicken'
+        lore:
+          - '&8VirtualSpawners Item'
+        material: CHICKEN
+        price: 250
+        enchanted: false
+      upgrade-price: 0
+    '2':
+      item-drop:
+        name: '&dSeasoned Chicken'
+        material: COOKED_CHICKEN
+        enchanted: true
+        price: 500
+      upgrade-price: 25000000
+COW:
+  tier:
+    '1':
+      item-drop:
+        name: '&eRaw Steak'
+        material: BEEF
+        enchanted: false
+        custom-model-data: 0
+        price: 250
+        xp: 3
+      upgrade-price: 0
+    '2':
+      item-drop:
+        name: '&dSeasoned Steak'
+        material: COOKED_BEEF
+        enchanted: true
+        custom-model-data: 0
+        price: 5000
+        xp: 3
+      upgrade-price: 100000000
+BUNNIE:
+  tier:
+    '1':
+      item-drop:
+        name: '&eBunnie Paw'
+        material: RABBIT_FOOT
+        enchanted: false
+        custom-model-data: 0
+        price: 250
+        xp: 3
+      upgrade-price: 0
+    '2':
+      item-drop:
+        name: '&dBunnie Fur'
+        material: RABBIT_HIDE
+        enchanted: true
+        custom-model-data: 0
+        price: 5000
+        xp: 3
+      upgrade-price: 100000000
