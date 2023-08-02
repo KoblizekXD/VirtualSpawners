@@ -57,19 +57,20 @@ public class Smelter {
                     return;
                 }
                 VSProfile profile = VSProfile.getProfiles().get(player.getUniqueId());
-                if (!profile.getBank().getSpawners().isEmpty()) {
-                    queue.get(0).setAmount(queue.get(0).getAmount()-1);
-                    if (queue.get(0).getAmount() != 0) {
-                        for (Spawner spawner : profile.getBank().getSpawners()) {
-                            if (!spawnerManager.isWorldValid(player.getWorld())) {
-                                return;
+                if (!profile.getBank().getSpawners().isEmpty() && !queue.isEmpty()) {
+                        queue.get(0).setAmount(queue.get(0).getAmount()-1);
+                        if (queue.get(0).getAmount() != 0) {
+                            for (Spawner spawner : profile.getBank().getSpawners()) {
+                                if (!spawnerManager.isWorldValid(player.getWorld())) {
+                                    return;
+                                }
+                                plugin.getServer().getPluginManager().callEvent(new SpawnerSpawnEvent(player, spawner));
                             }
-                            plugin.getServer().getPluginManager().callEvent(new SpawnerSpawnEvent(player, spawner));
+                        } else {
+                            queue.remove(0);
+                            destroySmelter(player);
                         }
-                    } else {
-                        queue.remove(0);
-                        destroySmelter(player);
-                    }
+
 
                 }
             }

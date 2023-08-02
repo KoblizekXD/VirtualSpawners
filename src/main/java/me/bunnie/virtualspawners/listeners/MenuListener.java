@@ -29,6 +29,8 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.*;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
 public class MenuListener
 implements Listener {
@@ -52,13 +54,19 @@ implements Listener {
             if (!event.isCancelled()) event.setCancelled(true);
             Button button = buttons.get(slot);
             button.onButtonClick(player, slot, event.getClick());
-        } else if (menu instanceof FuelSystemMenu) {
+        } else if (menu instanceof FuelSystemMenu fuelMenu) {
             if (event.getClickedInventory().equals(menu.getInventory(player)) && event.getCursor() == null) {
                 event.setCancelled(true);
             } else if (event.getClickedInventory().equals(player.getInventory())) {
                 event.setCancelled(true);
                 var smelter = Smelter.getOrCreateSmelter(player);
-                smelter.addMaterial(event.getCurrentItem());
+                var item = event.getCurrentItem();
+                fuelMenu.getInventory(player).setItem(8, item);
+                fuelMenu.getInventory(player).setItem(
+                        fuelMenu.getInventory(player).firstEmpty(),
+                        item
+                );
+                smelter.addMaterial(item);
             }
         }
     }
